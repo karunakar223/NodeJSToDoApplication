@@ -182,9 +182,7 @@ app.put("/todos/:todoId/", async (req, res) => {
 app.delete("/todos/:todoId/", async (req, res) => {
   const { todoId } = req.params;
   const deleteTodoQuery = `
-        SELECT 
-        * 
-        FROM 
+        DELETE FROM 
         todo 
         WHERE
         id = ${todoId};
